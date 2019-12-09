@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<p>Let's see how you performed!!!</p>
+
+{% if validated %}
+    
+    <p>Your username passed the 3 requirements</p>
+
+{% else %}
+
+    Oh no! Looks like you had issues with your username!
+
+    Here are the requirements you failed:
+
+    {% for key, requirement in requirements %}
+        <ul>
+            <li>{{ requirement }}</li>
+        </ul>
+    {% endfor %}
+    
+
+{% endif %}
+
+{% endblock %}
