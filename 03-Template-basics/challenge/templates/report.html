@@ -4,21 +4,21 @@
 
 <p>Let's see how you performed!!!</p>
 
-{% if validated %}
-    
-    <p>Your username passed the 3 requirements</p>
-
-{% else %}
-
+{% if checks %}
+        
     Oh no! Looks like you had issues with your username!
 
     Here are the requirements you failed:
 
-    {% for key, requirement in requirements %}
+    {% for check in checks %}
         <ul>
-            <li>{{ requirement }}</li>
+            <li>{{ VALIDATIONS[check] }}</li>
         </ul>
-    {% endfor %}
+    {% endfor %}    
+
+{% else %}
+
+<p>Your username passed the 3 requirements</p>
     
 
 {% endif %}
