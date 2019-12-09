@@ -25,4 +25,5 @@ def puppylatin(name):
 
 if __name__ == '__main__':
     # Fill me in!
+    #app.run(debug=True) for debug mode
     app.run()
