@@ -7,11 +7,11 @@ Watch the video lecture for more info on this! */
 Give the body element of the site a light gray background using HEX code*/
 body{
     background-color: #d3d3d3;
-    font-family: Aldrich;    
+    font-family: 'Aldrich', sans-serif;    
 }
 
 /*Task # 2
-Change the h1 to have a 4px solid black border*/
+Change the h1 to have a 1px solid black border*/
 /* And center the text. */
 h1{
     border: black;
