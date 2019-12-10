@@ -1,0 +1,14 @@
+version: '2.1'
+
+services:
+  db:
+    restart: always
+    image: postgres:11.6
+    environment:      
+      - POSTGRES_USER=flask_bootcamp
+      - POSTGRES_PASSWORD=flask_bootcamp
+      - POSTGRES_DB=flask_bootcamp_dev
+    volumes:
+      - ./postgres-data/postgres:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
