@@ -33,7 +33,6 @@ class Puppy(db.Model):
         else:
             return f"Puppy name is {self.name} and is ready for adoption!"
 
-    
     def report_toys(self):
         print("Here are my toys:")
         print([toy.item_name for toy in self.toys])
