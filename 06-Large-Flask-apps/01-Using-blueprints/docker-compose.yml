@@ -9,6 +9,25 @@ services:
       - POSTGRES_PASSWORD=flask
       - POSTGRES_DB=puppies_dev
     volumes:
-      - ./postgres-data/postgres:/var/lib/postgresql/data
+      - db-data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
+    networks:
+      - flask_net
+  
+  app:
+    build: .
+    image: python-flask:latest
+    ports:
+      - 5000:80
+    restart: always
+    depends_on: 
+      - db
+    networks:
+      - flask_net
+
+networks:
+  flask_net:
+
+volumes:
+  db-data:
